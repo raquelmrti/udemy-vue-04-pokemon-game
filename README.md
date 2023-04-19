@@ -1,24 +1,9 @@
-# 04-pokemon-game
+# Pokémon game with Vue // Fernando Herrera Udemy Course
 
-## Project setup
-```
-yarn install
-```
+This is the second project in Fernando Herrera's Udemy Course, [Vue.js: De cero a experto](https://www.udemy.com/course/vuejs-fh/). It's a little game where the user is presented with a silhouette of a Pokémon and must correctly guess its name out of four options
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+Here I will track my progress through it and possibly add some notes.
 
-### Compiles and minifies for production
-```
-yarn build
-```
+### **19/04/2023:**
 
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+-
