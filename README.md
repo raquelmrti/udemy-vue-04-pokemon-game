@@ -6,4 +6,4 @@ Here I will track my progress through it and possibly add some notes.
 
 ### **19/04/2023:**
 
--
+- Set up the structure of the project: one page component - `PokemonPage` - that contains two components - `PokemonPicture` and `PokemonOptions` -
