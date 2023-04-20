@@ -1,6 +1,6 @@
 <template>
   <h1>Who is this Pokémon?</h1>
-  <PokemonPicture />
+  <PokemonPicture :pokemonId='10' :showPokemon="true" />
   <PokemonOptions />
 </template>
 
@@ -13,6 +13,11 @@ export default {
   components: {
     PokemonPicture,
     PokemonOptions
+  },
+  data() {
+    return {
+      pokemonId: 0,
+    }
   }
 }
 </script>
