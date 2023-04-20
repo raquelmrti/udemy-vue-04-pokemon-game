@@ -10,7 +10,7 @@ const getPokemons = () => {
 
 const getPokemonsOptions = async () => {
   // Mix up the order
-  const mixedPokemons = getPokemons.sort(() => Math.random() - 0.5);
+  const mixedPokemons = getPokemons().sort(() => Math.random() - 0.5);
   // Get only the first four Pokémon
   const pokemons = await getPokemonNames(mixedPokemons.splice(0, 4));
 

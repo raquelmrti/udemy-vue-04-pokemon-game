@@ -1,7 +1,7 @@
 <template>
   <h1>Who is this Pokémon?</h1>
   <PokemonPicture :pokemonId='10' :showPokemon="true" />
-  <PokemonOptions />
+  <PokemonOptions :pokemons='pokemonArr' />
 </template>
 
 <script>
@@ -9,8 +9,6 @@ import PokemonPicture from '@/components/PokemonPicture'
 import PokemonOptions from '@/components/PokemonOptions'
 
 import getPokemonOptions from '@/helpers/getPokemonOptions'
-
-// console.log(getPokemonOptions())
 
 export default {
   name: 'PokemonPage',
@@ -20,8 +18,17 @@ export default {
   },
   data() {
     return {
-      pokemonId: 0,
+      pokemonArr: [],
     }
+  },
+  methods: {
+    async mixPokemonArray() {
+      this.pokemonArr = await getPokemonOptions()
+      console.log(this.pokemonArr)
+    }
+  },
+  mounted() {
+    this.mixPokemonArray()
   }
 }
 </script>
