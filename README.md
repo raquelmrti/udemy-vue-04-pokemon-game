@@ -11,3 +11,4 @@ Here I will track my progress through it and possibly add some notes.
 ### **20/04/2023:**
 
 - Finished the `PokemonPicture` component.
+- Made the `getPokemonOptions.js` helper which contains a few functions needed to fetch the 4 Pokemons and their names.
