@@ -10,7 +10,7 @@ import PokemonOptions from '@/components/PokemonOptions'
 
 import getPokemonOptions from '@/helpers/getPokemonOptions'
 
-console.log(getPokemonOptions())
+// console.log(getPokemonOptions())
 
 export default {
   name: 'PokemonPage',
