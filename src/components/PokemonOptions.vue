@@ -16,7 +16,7 @@ export default {
       type: Array,
       required: true
     }
-  }
+  },
 }
 </script>
 
@@ -32,6 +32,7 @@ li {
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  padding: .7em;
   margin-bottom: 10px;
   width: 250px;
 }
