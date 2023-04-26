@@ -36,11 +36,21 @@ export default {
     }
   },
   methods: {
+    capitalizeFirstLetter(value) {
+      return value.charAt(0).toUpperCase() + value.slice(1)
+    },
     async mixPokemonArray() {
       this.pokemonArr = await getPokemonOptions()
       const rndInt = Math.floor(Math.random() * 4)
       // Select one Pokemon from the pokemonArr randomly, this will be the correct answer
       this.pokemon = this.pokemonArr[rndInt]
+    },
+    restartGame() {
+      this.showPokemon = false
+      this.showAnswer = false
+      this.pokemonArr = []
+      this.pokemon = null
+      this.mixPokemonArray()
     },
     checkAnswer(pokeId) {
       if (this.showAnswer) return
@@ -49,18 +59,11 @@ export default {
       this.showAnswer = true
 
       if (pokeId === this.pokemon.id) {
-        this.message = `✅ Correct, it's ${this.pokemon.name}!`
+        this.message = `✅ Correct, it's ${this.capitalizeFirstLetter(this.pokemon.name)}!`
       } else {
-        this.message = `❌ Wrong, it's ${this.pokemon.name}!`
+        this.message = `❌ Wrong, it's ${this.capitalizeFirstLetter(this.pokemon.name)}!`
       }
     },
-    restartGame() {
-      this.showPokemon = false
-      this.showAnswer = false
-      this.pokemonArr = []
-      this.pokemon = null
-      this.mixPokemonArray()
-    }
   },
   mounted() {
     this.mixPokemonArray()

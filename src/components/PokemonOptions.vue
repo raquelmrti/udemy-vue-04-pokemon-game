@@ -2,7 +2,7 @@
   <div class='options-container'>
     <ul>
       <li v-for='pokemon in pokemons' :key="pokemon.id" @click="$event => $emit('selection', pokemon.id)">
-        {{ pokemon.name }}
+        {{ capitalizeFirstLetter(pokemon.name) }}
       </li>
     </ul>
   </div>
@@ -17,6 +17,11 @@ export default {
       required: true
     }
   },
+  methods: {
+    capitalizeFirstLetter(value) {
+      return value.charAt(0).toUpperCase() + value.slice(1)
+    }
+  }
 }
 </script>
 
